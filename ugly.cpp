@@ -14,9 +14,7 @@ void PrintCircle(int i, int j, int currentLetter, int size, int reverse, int num
 		   i * i + j * j <= ((2*k)+1) * ((2*k)+1) * (size * size)/denominator)
 			inARing = true;
 	}
-	if(/*i * i + j * j <= (size * size)/25 || 
-		(i * i + j * j >=  4*(size * size)/25) && 9*(i * i + j * j <= 9*(size * size)/25) ||
-		(i * i + j * j >= 16*(size * size)/25) &&   (i * i + j * j <=    size * size) */ inARing){
+	if(inARing){
 		if(i == reverse || j == reverse || i == -reverse || j == -reverse){
 			if(i*j > 0)
 				cout << word[word.size()-1-((i + j)%word.size())] << ' ';
